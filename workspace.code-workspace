@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "stock_update Debug",
+				"invokeTarget": {
+					"target": "api",
+					"templatePath": "./template.yml",
+					"logicalId": "updateStockFunction",
+				},
+				"api": {
+					"path": "/stocks/update",
+					"httpMethod": "post",
+					"payload": {
+						"json": {}
+					  },
+					  "querystring": "ticker=^vix&from=2015-05-014&to=2021-05-14",
+					  "headers": {
+						  "cookie": "name=value; name2=value2; name3=value3"
+					  }
+				},
+				"sam": {},
+				"aws": {},
+			},
+		]
+	}
+}

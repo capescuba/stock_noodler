@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "stock_update Debug",
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "InvokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/",
+                "lambdaHandler": "src/handlers/update-stock.updateStockHandler"
+            },
+            "lambda": {
+                "rutime": "nodejs14.x",
+                "payload": {
+                    "json": {
+                        "ticker": "wday",
+                        "name": "workday"
+                    },
+                "environmentVariables": {}
+                }
+            }
+        }
+    ]
+}
