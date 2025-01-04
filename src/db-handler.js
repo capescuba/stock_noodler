@@ -3,7 +3,7 @@ var mysql = require("mysql");
 var sqlConn = null;
 
 const dbUser = "financepoc";
-const dbPwd = "financepoc";
+const dbPwd = "xxx";
 const dbEndpoint = "financepoc.cwtfvoedygcp.us-east-1.rds.amazonaws.com";
 const dbPort = "3306";
 const dbName = "historical";
